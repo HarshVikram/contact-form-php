@@ -6,6 +6,17 @@
         $mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $cell = filter_var($_POST['cellphone'], FILTER_SANITIZE_NUMBER_INT);
         $msg  = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+        
+        // Creating Array of Errors
+        $formErrors = array();
+        if (strlen($user) <= 3) {
+            $formErrors[] = 'Username Must Be Larger Than <strong>3</strong> Characters';
+        }
+        if (strlen($msg) < 10) {
+            $formErrors[] = 'Message Can\'t Be Less Than <strong>10</strong> Characters'; 
+        }
+        
+        // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
                 
         $headers = 'From: ' . $mail . '\r\n';
         $myEmail = 'osama.elzero@gmail.com';
