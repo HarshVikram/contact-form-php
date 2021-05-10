@@ -17,7 +17,7 @@
         }
         
         // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
-                
+
         $headers = 'From: ' . $mail . '\r\n';
         $myEmail = 'osama.elzero@gmail.com';
         $subject = 'Contact Form';
@@ -37,3 +37,20 @@
         
     }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Elzero Contact Form</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/contact.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,900,900i">
+    </head>
+    <body>
+
+    </body>
+</html>
